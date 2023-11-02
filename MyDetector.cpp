@@ -8,7 +8,6 @@
 #include "MyDetector.hpp"
 #include "MyStack.hpp"
 #include "MyQueue.hpp"
-
 //
 namespace CPSC131::PalindromeDetector
 {
@@ -23,12 +22,15 @@ namespace CPSC131::PalindromeDetector
 	//add char to a linked list single)
 
 	
-	for(int i = 0; i < s.size(); i++){		//forloop initialized in i and then check that i less that the size 
-		Que.enqueue(s[i]);  //add in queue  
-		Stc.push(s[i]);   //add in stack
+	for(size_t i = 0; i < s.size(); i++){		//forloop initialized in i and then check that i less that the size 
+		char c = tolower(s[i]);
+		if( c >= 97 && c <= 122){						//Uppercase 65 is lower a and 90 is lower // lower case 97 to 122
+			Que.enqueue(c);  //add in queue  
+			Stc.push(c);   //add in stack
+		}
 	}
-	while( !Stc.empty() && !Que.empty()){
-		if (Stc.top() != Que.front){
+	while( !Stc.empty() || !Que.empty()){
+		if (Stc.top() != Que.front()){
 			return false;
 		}
 		Stc.pop();

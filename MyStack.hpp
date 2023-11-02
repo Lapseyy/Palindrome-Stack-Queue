@@ -46,7 +46,7 @@ namespace CPSC131
 			 */
 			void pop()
 			{
-				if (this->size_ = 0){
+				if (this->size_ == 0){
 					throw std::range_error("Out of range");
 				}
 				list.pop_front();
@@ -62,7 +62,7 @@ namespace CPSC131
 			 */
 			T& top()
 			{
-				if (this->size_ = 0){
+				if (this->size_ == 0){
 					throw std::range_error("Out of range");
 				}
 				return list.front();
@@ -74,6 +74,7 @@ namespace CPSC131
 			void clear()
 			{
 				list.clear();
+				this->size_ = 0;
 			}
 			
 			/**
@@ -81,7 +82,7 @@ namespace CPSC131
 			 */
 			size_t size()
 			{
-				return list.size();
+				return this->size_;
 			}
 			
 			/**

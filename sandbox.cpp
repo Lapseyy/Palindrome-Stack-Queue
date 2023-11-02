@@ -8,11 +8,15 @@
  */
 
 //
-#include <iostream>
+#include "MyDetector.hpp"
 
 
 //
-using std::cout, std::cin, std::endl;
+#include <iostream>
+#include <string>
+
+//
+using std::cout, std::cin, std::endl, std::string;
 
 
 //
@@ -20,7 +24,9 @@ int main()
 {
 	//
 	cout << "Hi. Put anything here you'd like." << endl;
-	
+	string s = "never odd or even";
+	CPSC131::PalindromeDetector::MyDetector d;
+	cout << d.isPalindrome(s) << endl;
 	return 0;
 }
 
