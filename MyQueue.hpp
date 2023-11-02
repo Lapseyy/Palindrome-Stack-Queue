@@ -32,7 +32,8 @@ namespace CPSC131
 			 */
 			void enqueue(const T& item)
 			{
-				
+				list.push_back(item);
+				size++;
 			}
 			
 			/**
@@ -44,7 +45,11 @@ namespace CPSC131
 			 */
 			void dequeue()
 			{
-				
+				if (this->size_ = 0){
+					throw std::range_error("Out of range");
+				}
+				list.pop_front();
+				size--;
 			}
 			
 			/**
@@ -56,7 +61,10 @@ namespace CPSC131
 			 */
 			const T& front()
 			{
-				
+				if (this->size_ = 0){
+					throw std::range_error("Out of range");
+				}
+				return list.front();
 			}
 			
 			/**
@@ -64,7 +72,7 @@ namespace CPSC131
 			 */
 			void clear()
 			{
-				
+				list.clear();
 			}
 			
 			/**
@@ -72,7 +80,7 @@ namespace CPSC131
 			 */
 			size_t size() const
 			{
-				
+				return this->size_;
 			}
 			
 			/**
@@ -80,7 +88,7 @@ namespace CPSC131
 			 */
 			bool empty() const
 			{
-				
+				return list.empty();
 			}
 		
 		//

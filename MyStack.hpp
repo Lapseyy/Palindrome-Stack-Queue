@@ -22,7 +22,7 @@ namespace CPSC131
 		//
 		public:
 			
-			/// YOUR WELCOME
+			/// YOUR WELCOME :3 
 			MyStack() {}
 			
 			/**
@@ -30,11 +30,13 @@ namespace CPSC131
 			 * 
 			 * Takes an item and pushes it onto the stack.
 			 */
+
 			void push(const T& item)
 			{
-				
+				list.push_front(item);
+				this->size_++;
+
 			}
-			
 			/**
 			 * Removes the next item from the stack
 			 * 
@@ -44,7 +46,11 @@ namespace CPSC131
 			 */
 			void pop()
 			{
-				
+				if (this->size_ = 0){
+					throw std::range_error("Out of range");
+				}
+				list.pop_front();
+				this->size_--;
 			}
 			
 			/**
@@ -56,7 +62,10 @@ namespace CPSC131
 			 */
 			T& top()
 			{
-				
+				if (this->size_ = 0){
+					throw std::range_error("Out of range");
+				}
+				return list.front();
 			}
 			
 			/**
@@ -64,7 +73,7 @@ namespace CPSC131
 			 */
 			void clear()
 			{
-				
+				list.clear();
 			}
 			
 			/**
@@ -72,7 +81,7 @@ namespace CPSC131
 			 */
 			size_t size()
 			{
-				
+				return list.size();
 			}
 			
 			/**
@@ -80,7 +89,7 @@ namespace CPSC131
 			 */
 			bool empty()
 			{
-				
+				 return list.empty();
 			}
 			
 		//
