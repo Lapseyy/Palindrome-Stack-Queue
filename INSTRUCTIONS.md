@@ -22,9 +22,9 @@ You'll implement code in several files:
 
 You may add helper functions to classes within the above source files, but do not remove or modify any existing functions.
 
-Unit tests to determine your grade will be run against the code in the above files, and no other files.
+Unit tests to determine your grade will be run agakefile*, *main.cpp*, and *CPP_Tests.cpp* filesainst the code in the above files, and no other files.
 
-The *Makefile*, *main.cpp*, and *CPP_Tests.cpp* files should not be edited.
+The *M should not be edited.
 
 The *main.cpp* file should not be edited. It is just a very simple interface to help you play around with your palindrome detector. It will not be graded. If you wish to make a custom program to help your debugging/development, you should edit the *sandbox.cpp* file instead.
 
